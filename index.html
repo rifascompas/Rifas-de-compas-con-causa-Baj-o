@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rifas de Compas con Causa – Bajío, México</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- Cambia src por tu logo real -->
+    <img id="main-logo" src="logo.png" alt="Logo" />
+    <h1>Rifas de Compas con Causa – Bajío, México</h1>
+  </header>
+
+  <main>
+    <section class="prize-section">
+      <img id="prize-img" src="premio.png" alt="Premio Principal" />
+      <div class="prize-info">
+        <h2 id="prize-title">¡Participa y gana este fabuloso premio!</h2>
+        <p id="prize-desc">Descripción corta del premio aquí.</p>
+      </div>
+    </section>
+
+    <section class="settings-bar">
+      <div>
+        <label for="ticket-price"><b>Precio por boleto:</b></label>
+        <input type="number" id="ticket-price" min="1" step="1" disabled>
+        <span>MXN</span>
+      </div>
+      <div>
+        <b>Máximo boletos por persona:</b> <span id="max-txt"></span>
+      </div>
+    </section>
+
+    <section class="legend-bar">
+      <span class="legend-item"><span class="legend-box disponible"></span> Disponible</span>
+      <span class="legend-item"><span class="legend-box seleccionado"></span> Seleccionado</span>
+      <span class="legend-item"><span class="legend-box vendido"></span> Vendido</span>
+    </section>
+
+    <section class="lucky-machine">
+      <label for="lucky-amount"><b>Máquina de la suerte:</b> Elegir <input type="number" id="lucky-amount" min="1" max="10" value="1"></label>
+      <button type="button" id="lucky-btn">¡Suerte!</button>
+    </section>
+
+    <section class="tickets-section">
+      <h2>Elige tus boletos</h2>
+      <div id="tickets-grid"></div>
+    </section>
+
+    <section class="user-data-bar">
+      <label for="nombre">Nombre*</label>
+      <input type="text" id="nombre" maxlength="50" autocomplete="name" required placeholder="Tu nombre">
+      <label for="telefono">Teléfono*</label>
+      <input type="tel" id="telefono" maxlength="15" autocomplete="tel" required placeholder="10 dígitos">
+    </section>
+
+    <section class="summary-bar">
+      <div>Seleccionados: <span id="selected-count">0</span></div>
+      <div>Subtotal: <span id="subtotal-amount">$0 MXN</span></div>
+      <button id="finalizar-btn">Finalizar compra</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Compas con Causa – Bajío, México</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
